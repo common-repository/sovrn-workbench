@@ -1,0 +1,4 @@
+plugin_environment: prod
+base_uri: https://workbench.sovrn.com/
+mixpanel_token: ef0f7a11e41c9b6da92490c75b45e141
+

@@ -1,0 +1,4035 @@
+/************************/
+
+/*****  ADMIN HOME  *****/
+
+/************************/
+
+/*** BODY ***/
+
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class *="pure-u"] {
+    font-size: 12px;
+    background-color: #f1f1f1;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: #0077c6;
+}
+
+a.sovrn-link {
+    text-decoration: none;
+    color: #0077c6;
+}
+
+a.sovrn-link:hover {
+    text-decoration: none;
+    color: #0077c6;
+}
+
+.material-icons {
+    color: #757575;
+}
+
+/* ADMIN MODAL */
+
+.modal-dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modal-dialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-dialog > div {
+    width: 756px;
+    border-radius: 2px;
+    position: relative;
+    /* move N / S */
+    /*margin: 33% auto; FOR ? */
+    margin: 12% auto;
+    padding: 23px 23px 23px 23px;
+    background: #fff;
+    font-family: museo500, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.54);
+    background-color: #fff;
+    box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.3), 0 0 24px 0 rgba(0, 0, 0, 0.22);
+    border-style: solid;
+    border-width: 0.5px;
+    border-image-source: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4) 5%, rgba(255, 255, 255, 0.0) 20%, rgba(255, 255, 255, 0.0));
+    border-image-slice: 1;
+    max-height: 100%;
+    overflow-y: scroll;
+}
+
+.modal-p {
+    font-size: 16px;
+    overflow: auto !important;
+}
+
+.modal-close {
+    color: #0077c6;
+    position: absolute;
+    right: 11px;
+    bottom: 20px;
+    text-align: center;
+    top: 8px;
+    width: 47px;
+    border: 0;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: museo_sans500, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.modal-close:hover {
+    /*color: #0077c6;*/
+}
+
+/* FBIA STEPS */
+
+.fbia-timeline-setup {
+    content: '';
+    position: absolute;
+    top: 226px;
+    left: 62px;
+    height: 659px;
+    width: 2px;
+    /*background: #c1daf6;*/
+    background: rgba(93, 159, 231, .7);
+    z-index: -1;
+}
+
+.fbia-timeline-page-selected {
+    content: '';
+    position: absolute;
+    top: 150px;
+    left: 62px;
+    height: 560px;
+    width: 2px;
+    background: rgba(93, 159, 231, .7);
+    z-index: -1;
+}
+
+.mdl-dialog {
+    margin-bottom: 60px;
+}
+
+.mdl-dialog.sovrn {
+    top: 100px;
+}
+
+.mdl-dialog.sovrnio {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+}
+
+.sso-welcome-content {
+  width: 1000px;
+   height: 540px;
+   margin: 0 auto;
+   top: 70px;
+   position: absolute;
+   right: 25%;
+   left: 18%;
+   box-shadow: 0 9px 46px 8px rgba(0, 0, 0, .14), 0 11px 15px -7px rgba(0, 0, 0, .12), 0 24px 38px 3px rgba(0, 0, 0, .2);
+
+}
+
+.mdl-dialog.facebook {
+    min-width: 840px;
+    top: 46px;
+}
+
+.fbia-number-circle {
+    border-radius: 50%;
+    /*behavior: url(PIE.htc);*/ /* remove if you don't care about IE8 */
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    /*background: #c1daf6;*/
+    background: #8dbbee;
+    color: #FFF;
+    text-align: center;
+    font: 22px museo_sans700, sans-serif;
+    line-height: 1.6;
+}
+
+.fbia-li {
+    margin-right: 130px;
+    padding-left: 85px;
+    margin-bottom: 51px;
+    margin-top: -59px;
+    min-width: 657px;
+}
+
+.fbia-step-wrapper {
+    overflow: auto;
+    max-height: 100%;
+}
+
+.fbia-step-content {
+    background-color: #F1F1F1;
+}
+
+.fbia-step-header {
+    font-family: museo_sans700, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: rgba(0, 0, 0, 0.87);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.fbia-main-header {
+    font-family: museo_sans500, sans-serif;
+    font-size: 38.4px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: rgba(0, 0, 0, 0.87);
+    margin-top: -14px;
+    margin-bottom: 49px;
+    margin-left: 82px;
+}
+
+.fbia-signup-button-container {
+    margin-top: 104px;
+    margin-right: 168px;
+    float: right;
+}
+
+.wp-admin select {
+    /*width: 380px;*/
+}
+
+.fbia-page-selected {
+    line-height: 1.3em;
+    color: #0ac33e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.fbia-checkbox-status {
+    padding: 0px;
+    margin: 0px 15px 0 0;
+}
+
+.fbia-select-a-page {
+    font-family: museo_sans500, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: rgba(0, 0, 0, 0.87);
+    margin-left: 4px;
+}
+
+.facebook-selected-wrapper {
+    display: inline;
+    font-family: museo_sans500, sans-serif;
+}
+
+select#sovrn_wb_fb_page_id {
+    width: 190px;
+    background: rgba(158, 158, 158, .2);
+}
+
+.img.sovrn-step-header {
+    height: 45px;
+    width: 200px
+}
+
+/* SOVRN REGISTER DIALOG */
+
+.sovrn-li {
+    margin-right: 130px;
+    padding-left: 69px;
+    margin-bottom: 10px;
+    margin-top: -28px;
+    min-width: 657px;
+}
+
+.sovrn-li-register {
+    max-width: 370px;
+    border-radius: 7px;
+    background: white;
+    margin-top: 18px;
+    padding-top: 12px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.sovrn-li-register-sso {
+    max-width: 370px;
+    border-radius: 7px;
+    background: white;
+    margin-top: 28px;
+    padding-top: 79px;
+    padding-bottom: 47px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    margin-left: 29%; 
+    margin-right:25%; 
+}
+
+.sovrn-li-register-wb {
+    max-width: 419px;
+    background: none;
+    margin-top: 28px;
+    padding-right: 10px;
+    float: right; 
+}
+
+.sovrn-li-login-sso {
+    max-width: 419px;
+    background: none;
+    margin-top: 28px;
+    padding-right: 10px;
+    margin-left: 523px;
+    float: right;
+    position: absolute;
+}
+
+.sovrn-li-wb-forgot-password {
+    max-width: 419px;
+    background: none;
+    margin-top: 28px;
+    padding-right: 10px;
+    margin-left: 523px;
+    float: right;
+    position: absolute;
+}
+
+.sovrn-step-header-register {
+    font-family: museo_sans500, sans-serif;
+    font-size: 22.4px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: rgba(255, 255, 255, 0.95);
+    margin-top: -39px;
+    margin-left: 22px; 
+    text-align: left;
+}
+
+.sovrn-step-header {
+    font-family: museo500, sans-serif;
+    font-size: 22.4px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: rgba(255, 255, 255, 0.95);
+    margin-top: -73px;
+    text-align: center;
+}
+
+.sovrn-step-header.register {
+    margin-top: auto;
+}
+
+
+/* FOR FIELD TITLES IN REGISTER */
+.sovrn-step-header-mid {
+    font-family: museo_sans700, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: rgba(0, 0, 0, 0.46);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sovrn-register-security-wrapper {
+    overflow-wrap: break-word;
+    width: 394px;
+    text-align: center;
+    margin-left: -22px;
+    padding-bottom: 48px;
+}
+
+.sovrn-register-security-privacy-policy {
+    margin-top: -10px;
+    font-size: 13px;
+}
+
+.sovrn-register-security-images-wrapper {
+    margin-left: 86px;
+}
+
+.material-icons.lock {
+    color: #FFD76C;
+    font-size: 85px;
+    margin-left: -51px;
+}
+
+.material-icons.fingerprint {
+    color: #BFBFBF;
+    font-size: 125px;
+}
+
+.material-icons.arrow-back {
+    color: white;
+    font-size: 36px;
+}
+
+
+.material-icons-information {
+    display: inline;
+    padding-top: -41px;
+    position: absolute;
+    margin-left: 8px; 
+    margin-top: -3px;
+}
+
+.material-icons.email {
+    color: #FFF;
+    font-size: 25px;
+}
+
+.mdl-textfield__label:after {
+    background-color: rgba(93, 159, 231, 1) !important;
+}
+
+/* INPUTS */
+
+input.mdl-textfield__input.sovrn-pw-input {
+    border-bottom: 2px solid #989A9C;
+    opacity: 0.8;
+    width: 100% !important;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    background: none; 
+    padding-top: 4px;
+    width: 401px !important;
+    font-family: museo500, sans-serif;
+}
+
+input.mdl-textfield__input.sovrn-workbench-email-input {
+    border-bottom: 2px solid #989A9C;
+    opacity: 0.8;
+    width: 100% !important;
+    -webkit-box-shadow: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background: none; 
+    padding-top: 4px;
+    width: 401px !important;
+    font-family: museo500, sans-serif;
+}
+
+input.mdl-textfield__input.sovrn-workbench-text-input {
+    border-bottom: 2px solid #989A9C;
+    opacity: 0.8;
+    width: 100% !important;
+    -webkit-box-shadow: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background: none; 
+    padding-top: 4px;
+    width: 401px !important;
+    font-family: museo500, sans-serif;
+}
+
+dialog#register-dialog.mdl-dialog.sovrn {
+    padding: 0em !important;
+    color: white !important;
+    position: absolute;
+    left: 18%;
+    right: 25%;
+    width: 1000px;
+    height: 542px;
+    box-shadow: none;
+}
+
+dialog#register-meridian-dialog.mdl-dialog.sovrn {
+    padding: 0em !important;
+    color: white !important;
+    position: absolute;
+    left: 18%;
+    right: 25%;
+    width: 1000px;
+    height: 542px;
+    box-shadow: none;
+}
+
+a#show-registration-dialog-sso {
+   vertical-align: top;
+   font-size: 34px;
+   color: white;
+   font-family: museo_sans500, sans-serif;
+   background-color: white;
+   background: rgba(93, 159, 231, 1);
+   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+   border-radius: 37px;
+   padding-bottom: 45px; 
+   padding-top: 17px; 
+   padding-left: 75px; 
+   padding-right: 82px;
+   border: 1px solid rgba(93, 159, 231, .2);
+   margin-bottom: 12px;
+   text-shadow: none;
+   margin-top: 10%;  
+}
+
+a#show-registration-dialog-sso:hover {
+	  cursor: pointer;
+    background: rgba(93, 159, 231, .85);
+}
+
+a#show-registration-dialog-wb {
+   vertical-align: top;
+   font-size: 34px;
+   color: white;
+   font-family: museo_sans500, sans-serif;
+   background-color: white;
+   background: rgba(93, 159, 231, 1);
+   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+   border-radius: 37px;
+   padding-bottom: 45px; 
+   padding-top: 17px; 
+   padding-left: 75px; 
+   padding-right: 82px;
+   border: 1px solid rgba(93, 159, 231, .2);
+   margin-bottom: 12px;
+   text-shadow: none;
+   margin-top: 20%;  
+}
+
+a#show-registration-dialog-wb:hover {
+	  cursor: pointer;
+    background: rgba(93, 159, 231, .85);
+}
+
+.password-criterion {
+    background: #FFF0F2;
+    border: 1px solid #CF3951;
+    border-radius: 5px;
+    color: #CF3951;
+    padding: 2px 8px;
+    margin-top: 20px;
+    font-size: 9px;
+    margin-left: -36px;
+    min-width: 454px;
+    font-family: museo_sans500, sans-serif;
+}
+
+.mdl-dialog__actions.sovrn-register-header {
+    background: rgba(93, 159, 231, 1) !important;
+}
+
+.mdl-button.close.sovrn-close-tos-pp {
+    background-color: rgba(93, 159, 231, 0) !important;
+}
+
+li.parsley-custom-error-message {
+    color: #B94A48;
+    font-family: museo500, sans-serif;
+    /*padding-top: 40px;*/
+}
+
+li.parsley-required {
+    color: #B94A48;
+    font-family: museo500, sans-serif;
+    /*padding-top: 40px;*/
+}
+
+li.parsley-equalto {
+    color: #B94A48;
+    font-family: museo500, sans-serif;}
+
+li.parsley-type {
+    color: #B94A48;
+    font-family: museo500, sans-serif;}
+
+li.parsley-pattern {
+    color: #B94A48;
+    font-family: museo500, sans-serif;
+}
+
+/* SIGN UP EMAIL - COUNTRY SUCCESS FOR VALIDATION */
+input#country.country-dropdown.country-background.parsley-success {
+  border: none; 
+}
+
+/* SIGN UP SSO - COUNTRY SUCCESS FOR VALIDATION */
+input#sso-country.country-dropdown.country-background.parsley-success {
+  border: none; 
+}
+
+/* SOVRN LOGIN DIALOG */
+
+/* FONT PLACEHOLDER */
+.forgot-password-button {
+    color: rgba(0, 0, 0, 0.54);
+    cursor: pointer;
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+}
+
+.forgot-password-button:hover {
+    color: rgba(93, 159, 231, .85);
+}
+
+a.forgot-password-button {
+    color: rgba(74,144,226,1);
+}
+
+a.login-wb-sign-up-with-email {
+    color: rgba(74,144,226,1); 
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px;
+    display: block;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+}
+
+/*HERE - BLUE HEADER FOR LOGIN TOP */
+/*.mdl-dialog__actions.sovrn-login-header {
+    background: rgba(93, 159, 231, 1) !important;
+    padding-top: 26px;
+    padding-bottom: 26px;
+}*/
+
+dialog#login-dialog.mdl-dialog.sovrn {
+    padding: 0em !important;
+    color: white !important;
+    position: absolute;
+    left: 18%;
+    right: 25%;
+    width: 1000px;
+    height: 570px;
+    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, .14), 0 11px 15px -7px rgba(0, 0, 0, .12), 0 24px 38px 3px rgba(0, 0, 0, .2);
+}
+
+.sovrn-li-login {
+    max-width: 370px;
+    border-radius: 7px;
+    background: white;
+    margin-top: 28px;
+    padding-top: 101px;
+    padding-bottom: 105px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.sovrn-step-header-login {
+    font-family: museo_sans500, sans-serif;
+    font-size: 22.4px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: rgba(255, 255, 255, 0.95);
+    margin-top: -73px;
+    text-align: left;
+}
+
+.sovrn-step-header-login-sso {
+    font-family: museo_sans500, sans-serif;
+    font-size: 22.4px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: rgba(255, 255, 255, 0.95);
+    margin-top: -74px;
+    text-align: center;
+}
+
+.sovrn-li-login-wb {
+    font-family: museo_sans500, sans-serif;
+    font-size: 22.4px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: rgba(255, 255, 255, 0.95);
+    margin-top: -74px;
+    text-align: center;
+}
+
+.sovrn-login-label-wrapper {
+    padding-top: 0px; 
+}
+
+/*HERE - SPACE FOR PARSLEY VALIDATION TEMP*/
+.sign-up-wb-label-wrapper {
+    /*padding-top: 45px; */
+}
+
+.login-li {
+    padding-left: 69px;
+}
+
+.sovrn-login-submit-wrapper {
+    margin-bottom: 62px; 
+}
+
+.mdl-dialog.sovrn-login-dialog-wrapper {
+    width: 950px;
+}
+
+.sovrn-li-login-landing {
+  font-family: museo_sans500, sans-serif;
+  font-size: 22.4px;
+  font-weight: 500;
+  line-height: 1.33;
+  color: rgba(255, 255, 255, 0.95);
+  margin-top: -74px;
+  text-align: center;
+  height: 80%; 
+  margin-top: 10%; 
+  margin-bottom: 10%
+}
+
+a#show-login-dialog-sso:hover {
+	  cursor: pointer;
+    background: rgba(93, 159, 231, .85);
+}
+
+/* NEED SANS700, 500 PLACEHOLDER */
+
+a#show-login-dialog-wb {
+    display: inline-block; 
+    color: #989A9C;
+    opacity: 0.8; 
+    font-size: 14px;
+    font-family: MuseoSans-500;
+    margin-left: 131px;
+    margin-top: 9px;
+}
+
+a#show-login-dialog-wb:hover {
+	  cursor: pointer;
+    opacity: 0.9; 
+}
+
+a.show-login-dialog-sso {
+    display: inline-block; 
+    color: #989A9C;
+    opacity: 0.8; 
+    font-size: 14px;
+    font-family: MuseoSans-500;
+    margin-left: 57px;
+    margin-top: 9px;
+}
+
+dialog#forgot-password-dialog.mdl-dialog.sovrn {
+    padding: 0em !important;
+    color: white !important;
+    position: absolute;
+    left: 18%;
+    right: 25%;
+    width: 1000px;
+    height: 572px;
+    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, .14), 0 11px 15px -7px rgba(0, 0, 0, .12), 0 24px 38px 3px rgba(0, 0, 0, .2);
+}
+
+.sovrn-li-forgot-password {
+    max-width: 370px;
+    border-radius: 7px;
+    background: white;
+    margin-top: 28px;
+    padding-top: 101px;
+    padding-bottom: 105px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.sovrn-li-reset-password {
+    max-width: 401px;
+    border-radius: 7px;
+    background: white;
+    padding-bottom: 105px;
+    padding-right: 28px;
+    float: right;
+    background: none;
+    margin-top: 65px;
+}
+
+.reset-password-button {
+    cursor: pointer;
+    margin-left: 102px;
+    font-size: 14px; 
+    color: #989A9C;
+    opacity: 0.8;
+    font-family: museo_sans500, sans-serif;
+}
+
+.reset-password-button:hover {
+    color: #989A9C;
+    opacity: 1;
+}
+
+button.mdl-button.cancel {
+    font-family: museo_sans500, sans-serif !important;
+    color: rgba(0, 0, 0, 0.46);
+    color: #989A9C;
+    opacity: 0.8;
+}
+
+a.privacy-policy {
+    color: rgba(93, 159, 231, .85);
+}
+
+a.privacy-policy:hover {
+    color: rgba(93, 159, 231, 1);
+}
+
+.sovrn-password-reset-text-wrapper {
+    font-size: 13px;
+    overflow-wrap: break-word;
+    width: 350px;
+    margin-left: -3px;
+    padding-top: 46px;
+    margin-bottom: -15px;
+    font-family: museo_sans500, sans-serif;
+}
+
+/* COUNTRY PRIVACY POLICY DIALOG */
+
+dialog#privacy-policy-dialog.mdl-dialog.sovrn {
+    padding: 0em !important;
+    color: white !important;
+    width: 1000px;
+    height: 542px;
+    left: 18%;
+    right: 25%;
+    box-shadow: none;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+dialog#registration-dialog-sso.mdl-dialog.sovrn {
+    padding: 0em !important;
+    color: white !important;
+    width: 1000px;
+    height: 542px;
+    left: 18%;
+    right: 25%;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+dialog#registration-dialog-wb.mdl-dialog.sovrn {
+    padding: 0em !important;
+    color: white !important;
+    width: 1000px;
+    height: 542px;
+    left: 18%;
+    right: 25%;
+    box-shadow: none;
+    overflow: none; 
+}
+
+/* LOGIN SSO */
+
+div#login-dialog-sso.mdl-dialog.sovrn {
+    width: 1000px;
+    height: 540px;
+    margin: 0 auto;
+    top: 70px;
+    position: absolute;
+    right: 25%;
+    left: 18%;
+    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, .14), 0 11px 15px -7px rgba(0, 0, 0, .12), 0 24px 38px 3px rgba(0, 0, 0, .2);
+}
+
+div#login-dialog-sso {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+}
+
+.background-for-sso-wb {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+}
+
+dialog#login-dialog-wb.mdl-dialog.sovrn {
+    padding: 0em !important;
+    color: white !important;
+    width: 1000px;
+    height: 570px;
+    left: 18%;
+    right: 25%;
+    box-shadow: none;
+    overflow: none; 
+}
+
+
+
+p#sso_privacy_policy_content {
+    background-color: white;
+    padding-bottom: 6px;
+    margin-left: -34px;
+    padding-top: 5px;
+    font-family: museo500, sans-serif;
+    font-size: 14px;
+}
+p#email_privacy_policy_content {
+    background-color: white;
+    padding-bottom: 6px;
+    margin-left: -34px;
+    padding-top: 5px;
+    font-family: museo500, sans-serif;
+    font-size: 14px;
+}
+
+.privacy-policy-button {
+    color: rgba(0, 0, 0, 0.54);
+    cursor: pointer;
+    margin-left: 114px;
+}
+
+.privacy-policy-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+}
+
+a.privacy-policy-link {
+    color: #0077c6;
+}
+
+.country-wrapper {
+    margin-bottom: 20px;
+    margin-left: 8px;
+}
+
+.country-wrapper-text {
+    margin-bottom: 0px;
+    margin-left: -6px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.37);
+    font-family: museo500, sans-serif;
+}
+
+input#country.country-dropdown.country-background {
+    background: none; 
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding-left: 32px; 
+}
+
+input#sso-country.country-dropdown.country-background {
+    background: none; 
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding-left: 32px; 
+}
+
+input.country-dropdown {
+    border: 1px solid black;
+}
+
+.country-select .selected-flag .arrow {
+    border-top: 4px solid white !important;
+    margin-top: -3px !important;
+}
+
+/* TERMS & CONDITIONS DIALOG */
+
+dialog#terms-and-conditions-dialog.mdl-dialog.sovrn {
+    padding: 0em !important;
+    color: white !important;
+    width: 1000px;
+    height: 542px;
+    left: 18%;
+    right: 25%;
+    box-shadow: none;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+p#email_terms_and_conditions_content {
+    background-color: white;
+    padding-bottom: 6px;
+    margin-left: -44px;
+    padding: 5px;
+    font-family: museo500, sans-serif;
+    font-size: 14px;
+    overflow-y: scroll;
+    height: 324px;
+    width: 456px;
+    box-shadow: 1px;
+    border: 2px solid grey;
+    border-radius: 3px;
+}
+
+dialog::backdrop {
+    background: none;
+}
+
+button.mdl-button.close.sovrn-close.tos-close {
+    position: relative;
+    display: inline;
+    margin-right: 401px;
+    margin-top: -76px;
+}
+
+/* CONFIRM DIALOGS */
+
+.mdl-dialog.confirm-dialog-wrapper-custom {
+    font-family: museo500, sans-serif;
+    min-width: 313px;
+}
+
+.mdl-dialog__title.confirm-dialog-title-custom {
+    font-family: museo_sans700, sans-serif;
+    font-size: 20px;
+}
+
+.confirm-dialog-actions-custom {
+    font-family: museo_sans700, sans-serif !important;
+}
+
+button#confirm-dialog-actions.mdl-dialog__actions.confirm-dialog-actions-custom {
+    font-family: museo_sans700, sans-serif !important;
+}
+
+/* WELCOME DIALOG */
+
+.welcome-dialog-container-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    /*min-height: 100%;*/
+    /*height: auto;*/
+}
+
+dialog#welcome-dialog.mdl-dialog.sovrn {
+    padding: 0em !important;
+    color: white !important;
+}
+
+/*YO*/
+.welcome-dialog-content {
+    width: 1000px;
+    height: 540px;
+    margin: 0 auto;
+    top: 70px;
+    position: absolute;
+    right: 25%;
+    left: 18%;
+    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, .14), 0 11px 15px -7px rgba(0, 0, 0, .12), 0 24px 38px 3px rgba(0, 0, 0, .2);
+}
+
+.welcome-dialog-header {
+    font-family: museo_sans500, sans-serif;
+    font-size: 22.4px;
+    line-height: 1.33;
+    margin-bottom: 49px;
+    margin-left: 275px;
+    padding-top: 26px;
+    color: rgba(255, 255, 255, 0.95);
+    padding-bottom: 26px;
+}
+
+.welcome-dialog-header-background {
+    background: rgba(93, 159, 231, 1);
+}
+
+.welcome-dialog-intro-wrapper {
+    margin-left: 89px;
+}
+
+p.welcome-dialog-p {
+    font-family: museo500, sans-serif;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    color: #FFF;
+    font-size: 20px;
+    padding-bottom: 34px;
+    font-weight: 400;
+}
+
+p.welcome-dialog-p-title {
+    font-family: museo500, sans-serif;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    color: #FFF;
+    padding-bottom: 68px;
+    margin-top: 34px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px
+}
+
+.welcome-dialog-wrapper {
+    margin-left: 165px;
+    margin-top: 14px;
+    font-family: museo_sans500, sans-serif;
+}
+
+.welcome-dialog-submit-buttom {
+    margin-left: 430px;
+}
+
+/* CUSTOMIZE MDL COMPONENTS */
+
+.mdl_switch {
+    max-width: 960px;
+}
+
+.mdl-switch.is-checked .mdl-switch__thumb {
+    background: rgba(86, 189, 134, 0.9) !important;
+}
+
+.mdl-switch.is-checked .mdl-switch__track {
+    background: rgba(86, 189, 134, .5) !important;
+}
+
+/* MDL CCHECKBOX */
+
+.mdl-checkbox__ripple-container .mdl-ripple {
+    background: rgb(255, 255, 255) !important;
+}
+
+.mdl-checkbox__box-outline {
+    border: 1px solid rgb(255, 255, 255) !important;
+}
+
+.mdl-checkbox.is-checked .mdl-checkbox__box-outline {
+    border: 2px solid rgb(255, 255, 255) !important;
+}
+
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
+    background: rgb(255, 255, 255) !important;
+}
+
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
+    background: rgb(255, 255, 255) !important;
+}
+
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
+    background: rgb(255,255,255) url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICB2aWV3Qm94PSIwIDAgMSAxIgogICBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0Ij4KICA8cGF0aAogICAgIGQ9Ik0gMC4wNDAzODA1OSwwLjYyNjc3NjcgMC4xNDY0NDY2MSwwLjUyMDcxMDY4IDAuNDI5Mjg5MzIsMC44MDM1NTMzOSAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IE0gMC4yMTcxNTcyOSwwLjgwMzU1MzM5IDAuODUzNTUzMzksMC4xNjcxNTcyOSAwLjk1OTYxOTQxLDAuMjczMjIzMyAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IgogICAgIGlkPSJyZWN0Mzc4MCIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lIiAvPgo8L3N2Zz4K") !important;
+}
+
+
+/* TOGGLES LABEL AND SWITCH ALIGNMENT */
+.mdl-switch__label.toggle-pad-label {
+    position: absolute;
+    top: 32px;
+    left: auto;
+    margin-left: -66px;
+}
+
+label.mdl-switch.toggle-pad {
+    padding-left: 16px;
+}
+
+.checkbox-status {
+    float: right;
+    padding: 0px;
+    margin: 0px 15px 0 0;
+    margin-top: 1%;
+}
+
+.mdl-checkbox__label {
+    font-family: museo;
+    /*font-size: 15px !important;*/
+}
+
+fieldset[disabled] .mdl-checkbox .mdl-checkbox__label, .mdl-checkbox.is-disabled .mdl-checkbox__label {
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+
+#register-dialog.mdl-dialog.sovrn-dialog {
+    max-width: 500px;
+}
+
+#register-meridian-dialog.mdl-dialog.sovrn-dialog {
+    max-width: 500px;
+}
+
+/* SOVRN ADMIN */
+
+#sovrn-admin-container {
+    margin: 0px 20px 0 2px;
+}
+
+/***  HEADER  ***/
+
+#sovrn-header {
+    width: 100%;
+    padding: 0;
+}
+
+#logo-banner {
+    text-decoration: none;
+    margin: 20px 0px 25px 0px;
+    display: inline-block;
+}
+
+#sovrn-logo {
+    margin-bottom: 5.7px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+#sovrn-title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    text-transform: uppercase;
+    font-family: museo300, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#beta-sovrn-title {
+    display: inline;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: museo300, sans-serif;
+    margin-left: 2px;
+}
+
+#dev-env-sovrn-title {
+    display: inline;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: museo300, sans-serif;
+    margin-left: 5px;
+}
+
+#adminmenu .wp-menu-image img {
+    padding: 5px 0 0;
+}
+
+#header-description {
+    width: 391px;
+    height: 26px;
+    line-height: normal;
+    margin: 0 0 16px;
+}
+
+.header-description-font {
+    font-family: museo300, sans-serif;
+    font-size: 11px;
+    color: #000000;
+    margin: 0 0 16px;
+}
+
+/* TOP NAV */
+
+#top-nav-menu {
+    font-size: 24px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.12);
+    margin-bottom: 18px;
+}
+
+.top-nav-menu-links {
+    display: inline;
+}
+
+.top-nav-border-bottom {
+    font-size: 24px;
+    border-bottom: solid 1px rgba(0, 80, 80, 0.8);
+    width: 100%;
+    position: fixed;
+    top: 183px;
+    left: 0;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.top-nav-menu-links {
+    text-decoration: none;
+    font-family: museo_sans500, sans-serif;
+    margin-right: 2%;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+    height: 17px;
+}
+
+.top-nav-menu-links a,
+.top-nav-menu-links a:focus {
+    color: inherit;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+li.top-nav-menu-links.current {
+    text-decoration: none;
+    padding-bottom: 17px;
+    margin-bottom: 0;
+    color: rgba(34, 34, 34, 1);
+}
+
+/* ADDED FOR NAV DIV TOGGLE */
+
+ul.tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+ul.tabs li {
+    background: none;
+    color: rgba(34, 34, 34, 0.4);
+    display: inline-block;
+    cursor: pointer;
+}
+
+li.current {
+    border-bottom: 2px solid rgb(93, 159, 231);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.current {
+    display: inherit;
+}
+
+.tab-content.disabled-content {
+    display: inherit;
+}
+
+.tab-content .tab-content-disabled-msg {
+    display: none;
+    padding: 12px 20px;
+    background: #F2DEDE;
+    border: 1px solid #a2433c;
+    color: #B94A48;
+    border-radius: 2px;
+    font-size: 1.2em;
+    line-height: normal;
+    font-family: museo500, sans-serif;
+    border-radius: 2px;
+}
+
+.tab-content.disabled-tab-content .tab-content-disabled-msg {
+    display: block;
+}
+
+.tab-content.disabled-tab-content .tab-content-layout {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.card-header {
+    font-family: museo_sans700, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.33;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 3px;
+}
+
+.module-card {
+    max-width: 650px;
+    display: inline-block;
+    margin-top: 1%;
+}
+
+.card-description {
+    width: 650px;
+    font-family: museo500, sans-serif;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.87);
+    margin: 0;
+}
+
+.card-description.facebook-connect {
+    margin-bottom: -16px;
+}
+
+ul.connect-facebook-ul {
+    background-color: #FFFFFF;
+    list-style: disc outside none;
+    padding: 0 0 0 25px;
+    font-family: museo500, sans-serif;
+    font-size: 14px;
+    line-height: 24px
+    
+}
+
+li.connect-facebook-li {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 24px
+}
+
+.card-logo {
+    float: left;
+    display: inline-block;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 16px;
+    margin-left: 16px;
+    height: 70px;
+    width: 70px;
+}
+
+.card-description.one-line {
+    margin-bottom: 19px;
+}
+
+/* APPLE NEWS */
+
+.card-description.one-line-apple-news {
+    margin-bottom: 19px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding-bottom: 23px; 
+}
+
+/*HERE DOUBLE*/
+input.mdl-textfield__input.sovrn-workbench-text-input-apple-news {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    width: 100% !important;
+    -webkit-box-shadow: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+input.button-apple-news {
+    color: white;
+    border-radius: 2px;
+    background: rgba(93, 159, 231, .85);
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    border: none;
+}
+
+input.button-apple-news-cancel {
+    padding-left: 83px;
+    padding-right: 83px;
+    background: none; 
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px;
+    border: none; 
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    color: rgba(132, 132, 132,0.8);
+}
+
+input.button-apple-news-cancel:hover {
+    color: rgba(132, 132, 132,1);
+}
+
+
+
+input.button-apple-news:hover {
+    cursor: pointer;
+    background: rgba(93, 159, 231, 1);
+}
+
+/* BUTTONS */
+
+.button-wrapper {
+    display: inline-block;
+    border: 5px solid red;
+    float: right;
+}
+
+.global-button {
+    float: right;
+    margin: -13px 20px;
+    display: inline-block;
+}
+
+.button-setup {
+    color: white;
+    border-radius: 2px;
+    background: rgba(93, 159, 231, .85);
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    float: right;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.welcome-button-setup {
+    color: white;
+    border-radius: 2px;
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    border: 2px solid #FFF;
+    transition: background-color .25s ease-out, color .25s ease-out;
+}
+
+.button-setup:hover {
+    cursor: pointer;
+    background: rgba(93, 159, 231, 1);
+}
+
+.welcome-button-setup:hover {
+    cursor: pointer;
+    background: rgba(93, 159, 231, 1);
+    border: 2px solid rgba(93, 159, 231, 1);
+}
+
+.button-setup + input {
+    display: none;
+}
+
+/*.button-setup + input + div{
+    display:none;
+}*/
+
+.button-setup + input:checked + div {
+    display: block;
+}
+
+.button-installed {
+    color: white;
+    border-radius: 2px;
+    background: #56bd86;
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding-left: 42.5px;
+    padding-right: 42.5px;
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+    float: right;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 16px;
+    max-width: 40px;
+}
+
+.button-inner-text {
+    margin-left: -18px;
+}
+
+/* END OF BUTTONS */
+
+.amp-dropdown {
+    /*display: none;
+    padding-left: 103px;
+    margin-top: 20px;*/
+}
+
+.setup {
+    padding: 20px;
+    cursor: pointer;
+}
+
+.chevron {
+    float: right;
+    padding: 0px;
+    /*margin: 0px 37px 0 0;*/
+    /*margin: 0px 2px 0 0;*/
+    margin-top: 1%;
+    /*font-size: 40px;*/
+    /* FOR JQ TO WORK */
+    display: none;
+    cursor: pointer;
+    /* FOR TOGGLE AND CHEVRON UP  */
+    margin: 10px 13px 0 11px;
+}
+
+.toggle-switch {
+    float: right;
+    padding: 0px;
+    margin-top: 1%;
+    cursor: pointer;
+    margin: 13px 44px 0 11px;
+    font-family: museo_sans500, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+#show-dialog-fb.toggle-switch .mdl-switch,
+#show-dialog-fb.toggle-switch .mdl-switch__track,
+#show-dialog-fb.toggle-switch .mdl-switch__thumb,
+#show-dialog-fb.toggle-switch .mdl-switch__ripple-container,
+#show-dialog-fb.toggle-switch .mdl-switch__label {
+    cursor: pointer !important;
+}
+
+.mdl-textfield__input {
+    outline-width: 0;
+    width: 326px !important;
+    float: left;
+}
+
+.mdl-switch__label {
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+/* TEXT RIGHT FOR TOGGLE */
+.mdl-switch__label fieldset[disabled] .mdl-switch, .mdl-switch.is-disabled .mdl-switch__label {
+    color: rgb(132, 132, 132) !important;
+}
+
+input[type="text"] {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border: 0;
+    box-shadow: none;
+}
+
+.form-label-placeholder-text {
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.38);
+}
+
+/***  MENU  ***/
+
+#sovrn-admin-menu {
+    margin: 1.5em 0em 1.5em 1em;
+    font-size: 1.25em;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.admin-menu-list {
+    display: inline-block;
+    margin: 0;
+}
+
+.admin-tab {
+    margin: 0;
+    border: 1px solid RGB(175, 175, 175);
+    display: inline-block;
+    text-decoration: none;
+    padding: .5em 1.5em;
+    color: RGB(130, 130, 130);
+}
+
+.admin-tab a {
+    text-decoration: none;
+    color: RGB(130, 130, 130);
+    background-color: RGB(242, 242, 242);
+}
+
+.admin-tab:hover {
+    color: white;
+}
+
+.admin-tab:focus {
+    color: white;
+    box-shadow: none;
+}
+
+.sovrn-inactive {
+    display: none;
+}
+
+.sovrn-active {
+    color: white;
+    background-color: RGB(169, 169, 169);
+}
+
+.nb-right {
+    border-right: none;
+}
+
+.left-b {
+    border-radius: 6px 0 0 6px;
+}
+
+.right-b {
+    border-radius: 0 6px 6px 0;
+}
+
+.sovrn-hovered {
+    color: white;
+    background-color: RGB(169, 169, 169);
+}
+
+/***  LAYOUT  ***/
+
+.layout-body {
+    min-width: 912px;
+}
+
+.layout-header {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 0.5px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-image-source: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) 80%, rgba(0, 0, 0, 0.02) 95%, rgba(0, 0, 0, 0.04));
+    border-image-slice: 1;
+    min-width: 970px;
+    transition: 3s ease-out;
+    border: none;
+}
+
+.hide {
+    opacity: 0;
+    height: 0 !important;
+}
+
+.layout-header-title {
+    margin: 0;
+    padding: 1em 0;
+    text-align: center;
+    font-weight: 900;
+}
+
+.layout-section {
+    padding-bottom: 35px;
+    max-width: 966px;
+}
+
+.arrow-chevron {
+    transform: rotate(180deg);
+}
+
+.section-header {
+    font-size: 1.65em;
+    font-weight: bold;
+    margin: 0;
+    padding: 25px 0 10px 0;
+    display: inline-block;
+}
+
+.layout-paragraph {
+    max-width: 966px;
+    margin: 1em;
+    font-size: 1.15em;
+    line-height: 1.6;
+}
+
+.layout-paragraph-header {
+    margin-bottom: 0;
+}
+
+.section-image {
+    margin: 2% 16%;
+    max-width: 600px;
+}
+
+.sovrn-settings-section {
+    width: 38%;
+    margin: 0 auto;
+    display: inline-block;
+    height: auto;
+    vertical-align: top;
+    margin: 1em 4%;
+    padding: 1em;
+}
+
+/* FORMS */
+
+.admin-label {
+    display: block;
+    font-size: 1.35em;
+    font-weight: 600;
+    margin: 10px 0 15px 0;
+    text-align: left;
+}
+
+.admin-input {
+    padding: 7px 15px 5px 9px;
+    font-size: 1.15em;
+}
+
+.admin-button {
+    vertical-align: top;
+    color: white;
+    background-color: RGB(122, 122, 122);
+    border-radius: 2px;
+    padding: 5px 20px;
+    border: none;
+}
+
+.admin-button:hover {
+    cursor: pointer;
+    background: #e5bb00;
+}
+
+.admin-footer {
+}
+
+.status-badge {
+    float: right;
+    color: #FFF;
+    margin: 16px 18px;
+    font-size: 16px;
+    background: #0ac33e;
+    padding: 6px 13px 6px 10px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*******************/
+
+/*****  SOVRN  *****/
+
+/*******************/
+
+.sovrn-intro {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sovrn-hubspot-form {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 1% 3%;
+}
+
+/******************/
+
+/*****  FBIA  *****/
+
+/******************/
+
+.fb-header-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -12px;
+    margin-right: 15px;
+}
+
+.fb-section {
+    width: 38%;
+    margin: 0 auto;
+    display: inline-block;
+    background-color: RGB(215, 215, 215);
+    border-radius: 6px;
+    height: 125px;
+    vertical-align: top;
+    margin: 1em 4%;
+    padding: 1em;
+}
+
+.fb-oauth {
+    padding: 3% 0;
+    text-align: center;
+}
+
+.fbp-link {
+    margin-top: 1em;
+    display: inline-block;
+    height: 46px;
+}
+
+.fbp-text {
+    font-size: 1.35em;
+    font-weight: 600;
+    margin: 10px 0 15px 0;
+}
+
+.fb-input-container {
+    margin-left: 14%;
+    padding: 3% 0;
+/ / margin-bottom: 1.15 em;
+}
+
+.fb-input-container .admin-button {
+    margin: .35em .75em;
+}
+
+.fbp-help {
+    margin-left: 10px;
+    display: block;
+    font-size: .95em;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fb-user-container {
+    margin-left: 3em;
+}
+
+.fb_profile-pic {
+    float: left;
+    margin-left: 1em;
+    display: inline-block;
+}
+
+.fb-user-name {
+    display: inline-block;
+    float: left;
+    margin-left: 1em;
+    vertical-align: top;
+}
+
+#open-pid {
+    display: inline-block;
+    text-decoration: underline;
+    color: #0073aa;
+    cursor: pointer;
+}
+
+.sovrn-modal-bg {
+    background-color: RGBa(122, 122, 122, 0.1);
+}
+
+#page-id-modal-bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    width: auto;
+    left: -20px;
+    background-color: RGBA(122, 122, 122, 0.9);
+    overflow: auto;
+}
+
+#page-id-modal {
+    display: none;
+    width: 88%;
+    position: absolute;
+    background-color: white;
+    margin: 6%;
+    z-index: 1000;
+    padding-bottom: 3em;
+}
+
+.sovrn-modal-header {
+    font-size: 2em;
+    margin: 1.33em 1em;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+#page-id-close {
+    cursor: pointer;
+    text-align: right;
+    padding: 1em 1em 0 0;
+    display: inline-block;
+    float: right;
+    font-size: 1.5em;
+    font-weight: 800;
+    height: 25px;
+}
+
+#page-id-close:hover {
+    color: red;
+}
+
+.step-container {
+    text-align: center;
+    background-color: RGB(241, 241, 241);
+    margin: 2.5em 7%;
+    padding: 1em 0;
+    border-radius: 6px;
+}
+
+.step-label {
+    text-align: left;
+    margin: 0 3em;
+    margin-top: 1.5em;
+    font-size: 1.35em;
+    font-weight: 600;
+}
+
+.step-image {
+    max-width: 600px;
+    margin: 2em 0;
+}
+
+.disconnect-button-wrapper {
+    margin-left: 1px;
+}
+
+.disconnect-button {
+    font-family: museo_sans500, sans-serif;
+    cursor: pointer;
+    color: #848484;
+    color: rgb(132, 132, 132);
+    border: 1px solid #FFF;
+    background: #fff;
+    outline: none;
+    margin-top: 12px; 
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+.disconnect-button:hover {
+    color: rgba(93, 159, 231, 1);
+}
+
+.disconnect-button:active {
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    transform: translateY(1px);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.disconnect-button-facebook {
+    font-family: museo_sans500, sans-serif;
+    cursor: pointer;
+    color: #848484;
+    color: rgb(132, 132, 132);
+    border: 1px solid #FFF;
+    background: #fff;
+    outline: none;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    margin-top: 12px;
+}
+
+.mdl-progress.sovrn-mdl-progress {
+    -webkit-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    width: 100%;
+    height: 0;
+}
+
+.mdl-progress.sovrn-mdl-progress.sovrn-mdl-progress-show {
+    height: 4px;
+}
+
+.mdl-progress.sovrn-mdl-progress.sovrn-mdl-progress-show {
+    height: 4px;
+}
+
+.notice.sovrn-notice {
+    -webkit-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    opacity: 0;
+    height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+.notice.sovrn-notice.sovrn-notice-show {
+    height: 44px;
+    opacity: 1;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+#wpbody-content .notice {
+    margin: 0;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+#wpbody-content .wrap .notice {
+    margin-right: 0;
+}
+
+.notice:first-child,
+.notice.sovrn-notice.sovrn-notice-show:first-child {
+    margin-top: 10px;
+}
+
+#wpbody-content {
+    padding-top: 10px;
+}
+
+/*****************/
+
+/*****  AMP  *****/
+
+/*****************/
+
+.sovrn-section {
+    width: 36%;
+    margin: 0 auto;
+    display: inline-block;
+    background-color: RGB(215, 215, 215);
+    border-radius: 6px;
+    vertical-align: top;
+    margin: 1em 4%;
+    padding: 1em;
+    text-align: center;
+}
+
+.amp-settings-section {
+    margin: 0 auto;
+    display: inline-block;
+    background-color: RGB(215, 215, 215);
+    border-radius: 6px;
+    width: 38%;
+    display: inline-block;
+    margin: 0 4%;
+    padding: 0 1.5em;
+}
+
+.amp-preview-section {
+    margin: 0 auto;
+    display: inline-block;
+    background-color: RGB(215, 215, 215);
+    border-radius: 6px;
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 1em;
+}
+
+.amp-step-container {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border: 1px #e5bb00 solid;
+    border-radius: 15px;
+    margin: 0px 8px;
+    margin-left: 0;
+    line-height: 2.15;
+}
+
+div#step-container-one {
+    background-color: #e5bb00;
+}
+
+h3.step-number {
+    font-size: 1.85em;
+    display: inline-block;
+    margin-right: .5em;
+}
+
+img.step-complete {
+    height: 16px;
+    width: 15px;
+    margin: -3px;
+    border-radius: 20px;
+    margin-left: 2px;
+    margin-bottom: 1px;
+    display: inline-block;
+}
+
+.ad-section {
+    width: 36%;
+    margin: 0 auto;
+    display: inline-block;
+    background-color: RGB(215, 215, 215);
+    border-radius: 6px;
+    vertical-align: top;
+    margin: 1em 4%;
+    padding: 1em;
+}
+
+.sovrn-ad-section {
+    margin: 35px auto;
+    max-width: 400px;
+}
+
+.sovrn-label {
+    display: block;
+    font-size: 1.35em;
+    font-weight: 600;
+    margin: 10px 0 15px 0;
+    text-align: center;
+}
+
+.sovrn-button {
+    vertical-align: top;
+    font-size: 18px;
+    color: black;
+    background-color: RGB(242, 204, 22);
+    border-radius: 2px;
+    padding: 8px 26px;
+    border: none;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.sovrn-button:hover {
+    cursor: pointer;
+    background: #e5bb00;
+}
+
+.submit-sovrn-register-wrapper {
+    margin-left: 13px;
+    max-width: 373px;
+    padding-top: 15px; 
+}
+
+.submit-sovrn-forgot-password-wrapper {
+    margin-left: 13px;
+    max-width: 373px;
+    padding-top: 15px;
+}
+
+p.submit-register {
+    text-align: center;
+    margin-right: 400px;
+    margin-top: 10px;
+}
+
+/* SOVRN DIALOG - REGISTER - SUBMIT BUTTON */
+
+input#submit-sovrn-register.button {
+    vertical-align: top;
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(93, 159, 231, .85);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    padding: 4px 30px;
+    border: 1px solid rgba(93, 159, 231, .2);
+    margin-bottom: 12px;
+    border-radius: 2px;
+    text-shadow: none;
+    height: auto;
+}
+
+input#submit-sovrn-register.button:hover {
+    cursor: pointer;
+    background: rgba(93, 159, 231, 1);
+}
+
+/* GENERAL - SUBMIT BUTTON */
+
+input#submit.button {
+    vertical-align: top;
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(93, 159, 231, .85);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    padding: 6px 38px;
+    border: 1px solid rgba(93, 159, 231, .2);
+    margin-bottom: 12px;
+    border-radius: 2px;
+    text-shadow: none;
+    height: auto;
+}
+
+input#submit.button:hover {
+    cursor: pointer;
+    background: rgba(93, 159, 231, 1);
+}
+
+/* FBIA - SELECT - SUBMIT BUTTON */
+
+input#submit-fbia-select.button {
+    vertical-align: top;
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(93, 159, 231, .85);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    padding: 6px 15px;
+    border: 1px solid rgba(158, 158, 158, .2);
+    margin-bottom: 12px;
+    border-radius: 2px;
+    text-shadow: none;
+    height: auto;
+}
+
+input#submit-fbia-select.button:hover {
+    cursor: pointer;
+    background: rgba(93, 159, 231, 1);
+}
+
+input#submit-facebook-change-page.button {
+    font-size: 19px;
+    color: rgba(158, 158, 158, .8);
+    font-family: fontAwesome;
+    background-color: white;
+    border-color: white;
+    margin-bottom: 12px;
+    text-shadow: none;
+    height: auto;
+    -webkit-box-shadow: none;
+    margin-top: -7px; 
+    margin-left: -3px;
+}
+
+input#submit-facebook-change-page.button:hover {
+    cursor: pointer;
+    color: rgba(158, 158, 158, .9); 
+}
+
+input#submit-sovrn-wb-register {
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(74,144,226,1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    border: 1px solid rgba(93, 159, 231, .2);
+    text-shadow: none;
+    height: auto;
+    text-transform: none;
+    float: right; 
+    width: 180px;
+    height: 40px;
+}
+
+input#submit-sovrn-wb-register:hover {
+    cursor: pointer;
+    background: rgba(93, 159, 231, 1);
+}
+
+input#cancel-sovrn-wb-register {
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(102,102,102,0.8); 
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    border: 1px solid rgba(102,102,102,1);
+    text-shadow: none;
+    height: auto;
+    text-transform: none;
+    float: left; 
+    width: 180px;
+    height: 40px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+input#cancel-sovrn-wb-register:hover {
+    cursor: pointer;
+    background: rgba(102,102,102,1); 
+}
+
+input#cancel-sovrn-forgot-wb-register {
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(102,102,102,0.8);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    border: 1px solid rgba(102,102,102,1);
+    text-shadow: none;
+    height: auto;
+    text-transform: none;
+    float: left;
+    width: 180px;
+    height: 40px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+input#cancel-sovrn-forgot-wb-register:hover {
+    cursor: pointer;
+    background: rgba(102,102,102,1);
+}
+
+/* SIGN UP SSO CANCEL BUTTON */
+
+input#previous-sovrn-sso-register {
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(102,102,102,0.8); 
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    border: 1px solid rgba(102,102,102,1);
+    text-shadow: none;
+    height: auto;
+    text-transform: none;
+    float: left; 
+    width: 180px;
+    height: 40px;
+    margin-top: 15px;
+}
+
+input#previous-sovrn-sso-register:hover {
+    cursor: pointer;
+    background: rgba(102,102,102,1); 
+}
+
+
+/* NEEDS MUSEOSANS700, 500 PLACEHOLDER */
+
+input#submit-sovrn-sso-login {
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(74,144,226,1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    border: 1px solid rgba(93, 159, 231, .2);
+    margin-top: 29px;
+    text-shadow: none;
+    height: auto;
+    text-transform: none;
+    width: 180px;
+    height: 40px;
+    margin-left: 106px;
+}
+
+/* NEEDS MUSEOSANS700, 500 PLACEHOLDER */
+
+input#next-sovrn-sso-register {
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(74,144,226,1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    border: 1px solid rgba(93, 159, 231, .2);
+    margin-top: 29px;
+    text-shadow: none;
+    height: auto;
+    text-transform: none;
+    width: 180px;
+    height: 40px;
+    margin-left: 106px;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 600;
+}
+
+input#submit-sovrn-sso-login:hover {
+    cursor: pointer;
+    background: rgba(93, 159, 231, 1);
+}
+
+input#next-sovrn-sso-register:hover {
+    cursor: pointer;
+    background: rgba(93, 159, 231, 1);
+}
+
+input#submit-sovrn-wb-login {
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(74,144,226,1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    border: 1px solid rgba(93, 159, 231, .2);
+    margin-top: 29px;
+    text-shadow: none;
+    height: auto;
+    text-transform: none;
+    width: 180px;
+    height: 40px;
+    margin-left: 106px;
+}
+
+input#submit-sovrn-wb-login:hover {
+    cursor: pointer;
+    background: rgba(93, 159, 231, 1);
+}
+
+/*input#submit-sovrn-forgot-wb-password {
+    vertical-align: top;
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(93, 159, 231, .85);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    padding: 1px 150px;
+    border: 1px solid rgba(93, 159, 231, .2);
+    margin-bottom: 3px;
+    margin-top: 15px; 
+    text-shadow: none;
+    height: auto;
+}*/
+
+/*input#submit-sovrn-forgot-wb-password:hover {
+    cursor: pointer;
+    background: rgba(93, 159, 231, 1);
+}*/
+
+input#submit-sovrn-reset-password {
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(74,144,226,1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    border: 1px solid rgba(93, 159, 231, .2);
+    margin-top: 5px;
+    text-shadow: none;
+    height: auto;
+    text-transform: none;
+    width: 180px;
+    height: 40px;
+    margin-left: 106px;
+    margin-bottom: 12px; 
+}
+
+input#submit-sovrn-reset-password:hover {
+    cursor: pointer;
+    background: rgba(74,144,226,0.8);
+}
+
+.sovrn-resend-passowrd-reset-wrapper {
+    margin-bottom: 0px; 
+}
+
+/* FOR SSO SUBMIT BUTTON REGISTER */
+
+input#submit-sovrn-sso-register {
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(74,144,226,1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    border: 1px solid rgba(93, 159, 231, .2);
+    text-shadow: none;
+    height: auto;
+    text-transform: none;
+    float: right; 
+    width: 180px;
+    height: 40px;
+}
+
+input#submit-sovrn-sso-register:hover {
+    cursor: pointer;
+    background: rgba(93, 159, 231, 1);
+}
+
+.amp-settings-section .submit {
+    text-align: right;
+    margin-right: 2em;
+}
+
+.amp-settings-section .form-table td {
+    width: 25em;
+}
+
+input#client_ga_id {
+    width: 14em;
+}
+
+.amp-ad-input-container {
+    margin: 0 5%;
+}
+
+.amp-ad-info {
+    display: inline;
+}
+
+#add-ad {
+    display: block;
+    margin-left: 5%;
+}
+
+.ad-label {
+    display: inline-block;
+    font-size: 1.35em;
+    font-weight: 600;
+    margin: 10px 0 15px 0;
+    text-align: left;
+}
+
+.ad-close {
+    cursor: pointer;
+    float: right;
+    margin-top: -5px;
+    margin-right: -23px;
+    height: 20px;
+}
+
+.add-ad-link {
+    float: right;
+}
+
+/*input[type=radio]:checked:before {
+    content: "\2022";
+    text-indent: -9999px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    font-size: 24px;
+    width: 8px;
+    height: 8px;
+    margin: 2px;
+    margin-left: 4px;
+    line-height: 16px;
+    background-color: RGB(242, 204, 22);
+}
+
+input[type=checkbox]:checked:before {
+    content: "\f147";
+    margin: -3px 0 0 -3px;
+    color: RGB(242, 204, 22);
+}*/
+
+input#are_you_a_publisher_or_network_0-cbb2de59-ed44-4517-bc94-6422c985680d {
+    border: 1px solid RGB(122, 122, 122);
+    height: 12px;
+    width: 16px;
+    background-color: RGB(241, 241, 241);
+    margin-bottom: 5px;
+}
+
+input#are_you_a_publisher_or_network_1-cbb2de59-ed44-4517-bc94-6422c985680d {
+    height: 12px;
+    border: 1px solid RGB(122, 122, 122);
+    width: 16px;
+    background-color: RGB(241, 241, 241);
+    margin-bottom: 5px;
+}
+
+input#i_have_read_and_agree_to_the_publisher_agreement-cbb2de59-ed44-4517-bc94-6422c985680d {
+    border: 1px solid black;
+    height: 14px;
+    border: 1px solid RGB(122, 122, 122);
+    width: 16px;
+    background-color: RGB(241, 241, 241);
+    margin-bottom: 5px;
+}
+
+input.hs-button.primary.large {
+    background-image: none;
+    vertical-align: top;
+    font-size: 18px;
+    color: black;
+    background-color: RGB(242, 204, 22);
+    border-radius: 2px;
+    padding: 12px 26px;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+    font-family: inherit;
+}
+
+input.hs-button.primary.large:focus {
+    border: none;
+}
+
+.hs-form .hs-button:hover:not(.inactive),
+.hs-form .hs-button:focus:not(.inactive),
+.hs-form .hs-button.hovered:not(.inactive) {
+    border: none !important;
+    box-shadow: none !important;
+    background: #e5bb00;
+}
+
+#sovrn-new-modal-bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    width: auto;
+    left: -20px;
+    background-color: RGBA(122, 122, 122, 0.9);
+    overflow: auto;
+}
+
+#sovrn-new-modal {
+    display: none;
+    width: 600px;
+    position: absolute;
+    background-color: white;
+    margin: 8% 23%;
+    z-index: 1000;
+    padding-bottom: 3em;
+}
+
+#sovrn-new-close {
+    cursor: pointer;
+    float: right;
+    margin: 15px;
+}
+
+#sovrn-user-modal-bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    width: auto;
+    left: -20px;
+    background-color: RGBA(122, 122, 122, 0.9);
+    overflow: auto;
+}
+
+#sovrn-user-modal {
+    display: none;
+    width: 600px;
+    position: absolute;
+    background-color: white;
+    margin: 8% 23%;
+    z-index: 1000;
+    padding-bottom: 3em;
+}
+
+#sovrn-user-close {
+    cursor: pointer;
+    float: right;
+    margin: 15px;
+}
+
+.sovrn-submit-response {
+    margin: 3em 0;
+}
+
+h2.sovrn-submit-header {
+    text-align: center;
+    font-size: 2.25em;
+    margin-top: 3em;
+}
+
+h2.sovrn-user-submit-header {
+    text-align: center;
+    font-size: 2.25em;
+    margin-top: 2.25em;
+}
+
+p.sovrn-submit-paragraph {
+    margin: 20px 45px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+p.sovrn-user-submit-paragraph {
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.7;
+    margin: 0 50px;
+}
+
+.sovrn-submit-step {
+    margin: 12px 0;
+    font-size: 1.25em;
+    font-weight: 800;
+    margin-left: 2.5em;
+}
+
+.wp-core-ui .button-primary.logo-save {
+    background: #dda20e;
+    border-color: #ab8900 #997600 #997600;
+    -webkit-box-shadow: 0 1px 0 #997600;
+    box-shadow: 0 1px 0 #997600;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #997600, 1px 0 1px #997600, 0 1px 1px #997600, -1px 0 1px #997600;
+}
+
+/*.preview-template {
+    max-width: 40%;
+}
+
+.sovrn-wrap span.description {
+    display: block;
+    width: 80%;
+    color: #666;
+}
+
+p.description.rm {
+    margin-bottom: 1em;
+}
+
+p.description.rm a {
+    text-decoration: none;
+}
+
+p.description.rm a i {
+    color: red;
+}*/
+
+.sovrn-wrap fieldset {
+    border: none;
+}
+
+.sovrn-wrap .form-table td {
+    width: 80%;
+}
+
+.p-amp-message {
+    font-size: .675em;
+    font-style: italic;
+    color: green;
+}
+
+.p-nonamp-message {
+    font-size: .675em;
+    font-style: italic;
+    color: orange;
+}
+
+.uploader-preview img.client_logo {
+    width: 95px;
+    padding: 10px 0;
+}
+
+.amp-preview img.client_logo {
+    width: 95px;
+    padding: 0;
+}
+
+/**  AMP PREVIEW  **/
+
+.amp-preview {
+    font: 16px/1.4 Sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #3d596d;
+    background: #fff;
+    text-align: left;
+}
+
+.amp-preview .title {
+    margin: 0;
+}
+
+.amp-preview nav.title-bar {
+    padding: 0 16px;
+}
+
+.amp-preview .meta,
+.amp-preview nav.title-bar,
+.wp-caption-text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+}
+
+.amp-preview .content {
+    padding: 16px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-weight: 400;
+    color: #3d596d;
+}
+
+.amp-preview ul.meta {
+    padding: 24px 0 0 0;
+    margin: 0 0 24px 0;
+}
+
+.amp-preview ul.meta li {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+
+.amp-preview nav.title-bar svg,
+.amp-preview nav.title-bar img {
+    fill: #fff;
+    float: left;
+    margin: 12px 8px 0 0;
+}
+
+.amp-preview nav.title-bar a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.75em;
+    vertical-align: top;
+    display: inline-block;
+    padding: 10px;
+    color: black;
+}
+
+.amp-preview nav.title-bar div {
+    line-height: 54px;
+    color: black;
+}
+
+.uploader-preview {
+    position: relative;
+    display: inline;
+}
+
+.uploader {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 1em;
+    margin-right: 1em;
+}
+
+a.logo-rm:hover {
+    cursor: pointer;
+}
+
+a.logo-rm i {
+    color: red;
+}
+
+/* This is for the basic accordion */
+
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover {
+}
+
+.ac-container label:hover:after,
+.ac-container input {
+    display: none;
+}
+
+.ac-container article {
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0px;
+    position: relative;
+    z-index: 10;
+}
+
+.ac-container input:checked ~ article.ac-small {
+    height: auto;
+}
+
+.ac-container input:checked ~ article.ac-medium {
+    height: auto;
+}
+
+.ac-container input:checked ~ article.ac-large {
+    height: auto;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/******************/
+
+/*****  PUBLISH MODAL  *****/
+
+/******************/
+
+.publish-modal-layout {
+    display: none;
+}
+
+.publish-modal-layout.publish-modal-layout-show {
+    display: block;
+}
+
+.publish-modal-layout .publish-modal-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+
+.publish-modal-layout .publish-modal-wrapper {
+    position: absolute;
+    z-index: 10001;
+    width: 1px;
+    height: 1px;
+    top: 90px;
+    left: 50%;
+}
+
+.publish-modal-layout .publish-modal-wrapper .publish-modal {
+    position: absolute;
+    width: 800px;
+    top: 0;
+    left: -420px;
+    background: #FFF;
+    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, .14), 0 11px 15px -7px rgba(0, 0, 0, .12), 0 24px 38px 3px rgba(0, 0, 0, .2);
+}
+
+.publish-modal-layout .publish-modal-wrapper .publish-modal .publish-modal-content {
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 13px;
+}
+
+.publish-modal-button-wrapper {
+    float: right;
+    margin-bottom: 20px;
+    padding-right: 26px;
+}
+
+button#publish-modal-submit-button {
+    vertical-align: top;
+    font-size: 20px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(93, 159, 231, .85);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    padding: 8px 31px;
+    border: 1px solid rgba(158, 158, 158, .2);
+    margin-bottom: 12px;
+    border-radius: 2px;
+    text-shadow: none;
+    height: auto;
+}
+
+button#publish-modal-submit-button:hover {
+    cursor: pointer;
+    background: rgba(93, 159, 231, 1);
+}
+
+button#publish-modal-cancel-button {
+    vertical-align: top;
+    font-size: 20px;
+    color: rgba(93, 159, 231, .85);
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    padding: 8px 31px;
+    margin-bottom: 12px;
+    border-radius: 2px;
+    text-shadow: none;
+    height: auto;
+    border: none;
+    background: none;
+}
+
+button#publish-modal-cancel-button:hover {
+    cursor: pointer;
+    color: rgba(93, 159, 231, 1);
+    text-shadow: none;
+    border: none;
+    background: none;
+}
+
+.publish-modal-status-wrapper {
+    border: 2px solid rgba(0, 0, 0, 0.77);
+    padding: 20px;
+    margin-top: 7px;
+    margin-bottom: 44px;
+}
+
+.publish-modal-share-text {
+    font-family: museo500, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    display: block;
+}
+
+.fa-facebook-square {
+    color: #3E5B96;
+    padding-right: 3px;
+}
+
+.fa-facebook-square.inactive {
+    color: #dddddd;
+    padding-right: 3px;
+}
+
+.fa-twitter-square {
+    color: #1DA1F2;
+    padding-right: 3px;
+}
+
+.fa-twitter-square.inactive {
+    color: #dddddd;
+    padding-right: 3px;
+}
+
+.fa-google-plus-square {
+    color: #dc4e41;
+    padding-right: 3px;
+}
+
+.fa-google-plus-square.inactive {
+    color: #dddddd;
+    padding-right: 3px;
+}
+
+.fa-apple {
+    color: #3E5B96;
+    padding-right: 3px;
+}
+
+.fa-apple.inactive {
+    color: #dddddd;
+    padding-right: 3px;
+}
+
+
+.fa-envelope {
+    color: #fff;
+    padding-right: 5px;
+    font-size: 32px;
+}
+
+.publish-modal-social-toggle {
+    float: none;
+    border: none;
+    box-shadow: none;
+    width: 50px;
+    height: 0;
+    min-width: 0;
+    cursor: pointer;
+}
+
+.publish-modal-social-toggle.publish-modal-social-inactive {
+    color: #dddddd;
+}
+
+.publish-modal-social-toggle input {
+    display: none;
+}
+
+textarea#publish-modal-add-your-status {
+    font-size: 1.3em;
+    font-family: museo500, sans-serif;
+    padding: 0;
+    color: #545454;
+    margin-top: 5px;
+    margin-bottom: 58px;
+    width: 100%;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.publish-modal-post-permalink {
+    color: #CCC;
+}
+
+.publish-modal-post-wrapper {
+    overflow: auto;
+}
+
+.publish-modal-thumbnail-placeholder {
+    float: left;
+    margin-right: 31px;
+}
+
+.publish-modal-thumbnail-placeholder img {
+    display: block;
+    min-height: 200px;
+    min-width: 200px;
+}
+
+.publish-modal-post-content-wrapper {
+    float: left;
+    margin-right: 31px;
+}
+
+.publish-modal-post-title {
+    font-weight: bold;
+    font-size: 1.6em;
+    font-family: museo_sans500, sans-serif;
+}
+
+.publish-modal-post-content {
+    color: #929292;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.left-panel
+{
+    background-color:#ccc;
+    width:10%;
+    height:100px;
+    float:left;
+}
+.right-panel
+{
+    width:80%;
+    height:100px;
+    float:left;
+}
+
+.twitter-profile-wrapper {
+    margin-left: 101px;
+    margin-top: 9px;
+}
+
+.twitter-name-wrapper {
+    margin-left: 12px; 
+    display: inline;
+    padding-top: 13px;
+}
+
+.twitter-name-wrapper p {
+    font-family: museo_sans500, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline; 
+}
+
+.google-plus-name-wrapper {
+    margin-left: 12px; 
+    display: inline; 
+    padding-top: 13px;
+}
+
+.google-plus-name-wrapper p {
+    font-family: museo_sans500, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline; 
+}
+
+.facebook-page-name-wrapper {
+    margin-left: 12px;
+    display: inline;
+    margin-left: 30px; 
+}
+
+.facebook-page-name-wrapper p {
+    font-family: museo_sans500, sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: inline; 
+}
+
+.facebook-arrow-right-wrapper {
+    font-size: 45px;
+    margin-left: 34px; 
+    margin-top: 10px; 
+    color: rgba(158, 158, 158, .8);
+    display: inline; 
+    vertical-align: middle;
+}
+
+.facebook-profile-wrapper {
+    display: table;
+    table-layout: fixed;
+    width: auto;
+    height: 75px;
+    margin-left: 101px;
+    margin-top: 9px;
+}
+
+.facebook-name-wrapper {
+    margin-left: 12px; 
+    display: inline;
+    padding-top: 13px;
+}
+
+.facebook-name-wrapper p {
+    font-family: museo_sans500, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline;
+}
+
+input#submit-facebook-page-selected.button {
+    vertical-align: top;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: museo_sans500, sans-serif;
+    background: rgba(158, 158, 158, .2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    padding: 0px 22px;
+    border: 1px solid rgba(158, 158, 158, .2);
+    text-shadow: none;
+    height: auto;
+    margin-top: -28px;
+    margin-left: 203px;
+    display: inline-block;
+}
+
+input#submit-facebook-page-selected.button:hover {
+    cursor: pointer;
+    color: rgba(158, 158, 158, .9); 
+}
+
+.disconnect-button-wrapper-facebook {
+    margin-left: 3px; 
+}
+
+.inline-wrapper {
+    display: inline;
+}
+
+form#disconnect-google-plus-form {
+    display: table-cell;
+    height: 76px;
+    margin-bottom: 15px;
+}
+
+.google-plus-profile-wrapper {
+    display: table;
+    table-layout: fixed;
+    width: auto;
+    height: 75px;
+    margin-left: 101px;
+    margin-top: 9px;
+}
+
+form#disconnect-twitter-form {
+    display: table-cell;
+    height: 76px;
+    margin-bottom: 15px;
+}
+
+form#disconnect-facebook-form {
+    display: table-cell;
+    height: 76px;
+    margin-bottom: 15px;
+}
+
+form#fb-pages-form {
+    display: table-cell;
+    margin-bottom: 15px;
+}
+
+.facebook-select-page-wrapper {
+    display: inline-block;
+    margin-left: 30px; 
+}
+
+div.mdl-textfield.mdl-js-textfield.sovrn-workbench-email-input {
+    color: white; 
+    width: 401px; 
+}
+
+div.mdl-textfield.mdl-js-textfield.sovrn-pw-input {
+    color: white; 
+    width: 401px; 
+}
+
+div.mdl-textfield.mdl-js-textfield.sovrn-workbench-text-input {
+    color: white; 
+    width: 401px; 
+}
+
+label.mdl-textfield__label.label-sso-username {
+    color: #989A9C; å
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px; 
+    opacity: 0.8;
+}
+
+label.mdl-textfield__label.label-sso-password {
+    color: #989A9C; 
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px; 
+    opacity: 0.8;
+}
+
+/* NEED TO ADD MUSEO700 TO HEAD.PHP & CREATE FONT/ADD FILES, museo500 is TEMP */
+.sovrn-sso-signin-header h2 {
+    font-family: museo500, sans-serif;
+    font-size: 32px; 
+    color: white; 
+    -webkit-font-smoothing: antialiased;
+    margin-top: -6px;
+    margin-bottom: -60px;
+}
+
+.sovrn-wb-signin-header h2 {
+    font-family: museo500, sans-serif;
+    font-size: 32px; 
+    color: white; 
+    -webkit-font-smoothing: antialiased;
+    margin-top: -6px;
+    margin-bottom: 16px;
+}
+
+.sovrn-wb-signup-header h2 {
+    font-family: museo500, sans-serif;
+    font-size: 32px; 
+    color: white; 
+    -webkit-font-smoothing: antialiased;
+    margin-top: -57px;
+    margin-bottom: 16px;
+}
+
+.sovrn-sso-signin-header {
+    background: none; 
+    margin-bottom: 104px; 
+}
+
+.sovrn-sso-signin-header-update h2 {
+    font-family: museo500, sans-serif;
+    font-size: 32px; 
+    color: white; 
+    -webkit-font-smoothing: antialiased;
+    margin-top: 2px;
+    margin-bottom: 60px;
+}
+
+.sovrn-sso-signin-header-update {
+    background: none; 
+    margin-bottom: 104px; 
+}
+
+.sovrn-wb-signin-header {
+    background: none; 
+}
+
+.sovrn-wb-signin-header p {
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px;
+    color: rgba(255,255,255, 0.8);
+    -webkit-font-smoothing: antialiased;
+    width: 390px;
+}
+
+.sovrn-sso-description-header {
+    background: none; 
+}
+
+.sovrn-sso-description-header h2 {
+    color: #FCCB03;
+    font-family: museo500, sans-serif;
+    font-size: 60px; 
+    -webkit-font-smoothing: antialiased;
+    margin-top: -77px;
+    margin-bottom: 2px;  
+}
+
+.sovrn-sso-description-header h3 {
+    color: white;
+    font-family: museo500, sans-serif;
+    font-size: 32px;
+}
+
+.sovrn-sso-description-text {
+    background: none; 
+    margin-top: 58px; 
+}
+
+.sovrn-sso-description-text p {
+    color: rgba(255, 255, 255, 0.92);
+    font-family: museo_sans500, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 24px;
+    font-weight: 500;  
+    line-height: 1.2; 
+}
+
+.mdl-button.close.sovrn-close {
+    color: #989A9C;
+    font-size: 24px; 
+    font-family: fontAwesome; 
+    transition: none; 
+    background-color: none; 
+}
+
+.mdl-button.close.sovrn-close:hover {
+    background: none; 
+    transition: none; 
+    background-color: none; 
+}
+
+.amp-ads-text-coming-soon {
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(34, 34, 34, 0.4);
+    display: inline;
+}
+
+div.mdl-textfield.mdl-js-textfield.sovrn-workbench-email-input {
+    color: white; 
+    width: 401px; 
+}
+
+div.mdl-textfield.mdl-js-textfield.sovrn-pw-input {
+    color: white; 
+    width: 401px; 
+}
+
+.mdl-textfield.mdl-js-textfield.sovrn-pw-input {
+  margin-top: -17px;
+}
+
+label.mdl-textfield__label.label-sso-username {
+    color: #989A9C;
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px; 
+    opacity: 0.8;
+}
+
+label.mdl-textfield__label.label-sso-password {
+    color: #989A9C; 
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px; 
+    opacity: 0.8;
+}
+
+label.mdl-textfield__label.label-wb-username {
+    color: #989A9C;
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px; 
+    opacity: 0.8;
+}
+
+label.mdl-textfield__label.label-wb-password {
+    color: #989A9C; 
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px; 
+    opacity: 0.8;
+}
+
+.mdl-textfield__input.sovrn-pw-input {
+    color: rgba(255, 255, 255, 0.92); 
+    font-family: museo_sans500, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.mdl-textfield__input.sovrn-workbench-email-input {
+    color: rgba(255, 255, 255, 0.92); 
+    font-family: museo_sans500, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.mdl-textfield__input.sovrn-workbench-text-input {
+    color: rgba(255, 255, 255, 0.92); 
+    font-family: museo_sans500, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+span.mdl-checkbox__label.label-wb-terms-text {
+    font-family: museo_sans500;
+    font-size: 14px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* FOR SIGN UP EMAIL */
+a#show-terms-and-conditions-dialog.tos-link {
+    color: white; 
+    text-decoration: underline;
+}
+
+a#show-terms-and-conditions-dialog.tos-link:hover {
+    color: rgba(255, 255, 255,0.8); 
+}
+
+a#show-privacy-policy-dialog.privacy-policy-link {
+    color: white; 
+    text-decoration: underline; 
+}
+
+a#show-privacy-policy-dialog.privacy-policy-link:hover {
+    color: rgba(255, 255, 255,0.8);  
+}
+
+/* FOR SIGN UP SSO*/
+a#show-sso-terms-and-conditions-dialog.tos-link {
+    color: white; 
+    text-decoration: underline;
+}
+
+a#show-sso-terms-and-conditions-dialog.tos-link:hover {
+    color: rgba(255, 255, 255,0.8); 
+}
+
+a#show-sso-privacy-policy-dialog.privacy-policy-link {
+    color: white; 
+    text-decoration: underline; 
+}
+
+a#show-sso-privacy-policy-dialog.privacy-policy-link:hover {
+    color: rgba(255, 255, 255,0.8);  
+}
+
+.sovrn-sso-description-header h2 {
+    color: #FCCB03;
+    font-family: museo500, sans-serif;
+    font-size: 60px; 
+    -webkit-font-smoothing: antialiased;
+    margin-top: -77px;
+    margin-bottom: 2px;  
+}
+
+.sovrn-sso-description-header h3 {
+    color: white;
+    font-family: museo500, sans-serif;
+    font-size: 32px;
+}
+
+.sovrn-sso-description-text {
+    background: none; 
+    margin-top: 58px; 
+}
+
+.sovrn-sso-description-text p {
+    color: rgba(255, 255, 255, 0.92);
+    font-family: museo_sans500, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 24px;
+    font-weight: 500;  
+    line-height: 1.2; 
+}
+
+.sovrn-sso-description-wrapper {
+    float: left;
+    width: 390px;
+    margin-left: 26px;
+    margin-top: 56px; 
+}
+
+.mdl-button.close.sovrn-close {
+    color: #989A9C;
+    font-size: 24px; 
+    font-family: fontAwesome; 
+    transition: none; 
+    background-color: none; 
+}
+
+.mdl-button.close.sovrn-close:hover {
+    background: none; 
+    transition: none; 
+    background-color: none; 
+}
+
+.dialog-login-sso-footer-wrapper {
+    line-height: 26px; 
+    display: inline-block; 
+    margin-top: 24px; 
+    text-align: center;
+    margin-left: 111px;
+}
+
+.dialog-login-wb-footer-wrapper {
+    line-height: 26px; 
+    display: inline-block; 
+    margin-top: 24px; 
+    text-align: center;
+    margin-left: 75px;
+    margin-left: 109px;
+}
+
+
+
+/*Hide all except first fieldset*/
+#mainsignupform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+p#fieldset-subtitle  {
+    font-family: museo_sans500, sans-serif;
+    font-size: 14px;
+    color: rgba(255,255,255, 0.8);
+    max-width: 370px; 
+    margin-top: -42px;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.sovrn-wb-forgot-password-header h2 {
+    font-family: museo500, sans-serif;
+    font-size: 32px; 
+    color: white; 
+    -webkit-font-smoothing: antialiased;
+    margin-top: 2px;
+    margin-bottom: -41px;
+}
+.sovrn-wb-forgot-password-header {
+    background: none; 
+    margin-bottom: 104px; 
+}
+
+.sovrn-wb-forgot-password-header p {
+    color: rgba(255, 255, 255, 0.92);
+    font-family: museo_sans500, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    font-weight: 500;  
+    line-height: 1.2; 
+    margin-top: 58px;
+}
+
+.sovrn-wb-forgot-password-label-wrapper {
+    margin-top: -42px; 
+}
+
+input#submit-sovrn-forgot-wb-password {
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    color: white;
+    font-family: museo_sans500, sans-serif;
+    background-color: white;
+    background: rgba(74,144,226,1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    border: 1px solid rgba(93, 159, 231, .2);
+    text-shadow: none;
+    height: auto;
+    text-transform: none;
+    float: right;
+    width: 180px;
+    height: 40px;
+}
+
+input#submit-sovrn-forgot-wb-password:hover {
+    cursor: pointer;
+    background: rgba(74,144,226,1);
+}
+
+.sovrn-wb-reset-password-header h2 {
+    font-family: museo500, sans-serif;
+    font-size: 32px; 
+    color: white; 
+    -webkit-font-smoothing: antialiased;
+    margin-top: 2px;
+    margin-bottom: -41px;
+}
+.sovrn-wb-reset-password-header {
+    background: none; 
+    margin-bottom: 104px; 
+}
+
+.wb-alert {
+    font-family: museo_sans500, sans-serif;
+    padding: 6px;
+    background-color: #faebed;
+    color: #c7243a;
+    border: 1px solid #c7243a;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.wb-alert-closebtn {
+    margin-left: 15px;
+    color: rgba(152,154,156,0.8);
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.wb-alert-closebtn:hover {
+    color: rgba(152,154,156,1);
+}
+
+input.mdl-textfield__input.sovrn-workbench-text-input-apple-news {
+    display: block;
+}
+
+.edit-apple-news-wrapper {
+    display: inline-block;
+    width: 419px; 
+}
+
+.sovrn-step-header.privacy-step-header {
+    color: rgba(152,154,156,1);
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+}
+
+.sovrn-step-header.privacy-step-header h2 {
+    font-family: museo500, sans-serif;
+    font-size: 32px; 
+    color: white; 
+    -webkit-font-smoothing: antialiased;
+    margin-top: -57px;
+    margin-bottom: 16px;
+}
+
+.sovrn-step-header-tos {
+    font-family: museo500, sans-serif;
+    font-size: 22.4px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: rgba(255, 255, 255, 0.95);
+    margin-top: -71px;
+    text-align: left;
+    margin-left: -45px;
+}
+
+.sovrn-step-header-tos.privacy-step-header h2 {
+    font-family: museo500, sans-serif;
+    font-size: 32px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    margin-top: -47px;
+    margin-bottom: 16px;
+}
+
+input#terms-of-service-close-button {
+   font-size: 14px;
+   color: white;
+   font-family: museo_sans500, sans-serif;
+   background-color: white;
+   background: rgba(74,144,226,0.8);
+   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+   border-radius: 6px;
+   border: 1px solid rgba(93, 159, 231, .2);
+   text-shadow: none;
+   height: auto;
+   outline:none;
+   text-transform: none;
+   float: left;
+   width: 180px;
+   height: 40px;
+   margin-left: 101px;
+   margin-top: 8px;
+   font-weight: 600;
+   -webkit-font-smoothing: antialiased;
+}
+
+input#terms-of-service-close-button:hover {
+    cursor: pointer;
+    background: rgba(74,144,226,1);
+}
+
+/* PRIVACY POLICY BACK BUTTON */
+
+input#privacy-policy—close-button {
+   font-size: 14px;
+   color: white;
+   font-family: museo_sans500, sans-serif;
+   background-color: white;
+   background: rgba(74,144,226,0.8);
+   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+   border-radius: 6px;
+   border: 1px solid rgba(93, 159, 231, .2);
+   text-shadow: none;
+   height: auto;
+   outline:none;
+   text-transform: none;
+   float: left;
+   width: 180px;
+   height: 40px;
+   margin-left: 101px;
+   margin-top: 8px;
+   font-weight: 600;
+   -webkit-font-smoothing: antialiased;
+}
+
+input#privacy-policy—close-button:hover {
+    cursor: pointer;
+    background: rgba(74,144,226,1);
+}
+
+
+.sovrn-step-header-pp.privacy-step-header h2 {
+    font-family: museo500, sans-serif;
+    font-size: 32px; 
+    color: white; 
+    -webkit-font-smoothing: antialiased;
+    margin-top: -57px;
+    margin-bottom: 16px;
+}
+
+.sovrn-step-header-pp {
+    font-family: museo500, sans-serif;
+    font-size: 22.4px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: rgba(255, 255, 255, 0.95);
+    margin-top: -71px;
+    text-align: left;
+    margin-left: -45px;
+}
+
+.sovrn-step-header-pp.privacy-step-header h2 {
+    font-family: museo500, sans-serif;
+    font-size: 32px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    margin-top: -47px;
+    margin-bottom: 16px;
+} 
+
+p#email_privacy_policy_content {
+    background-color: white;
+    padding-bottom: 6px;
+    margin-left: -44px;
+    padding: 5px;
+    font-family: museo500, sans-serif;
+    font-size: 14px;
+    overflow-y: scroll;
+    height: 324px;
+    width: 456px;
+    box-shadow: 1px;
+    border: 2px solid grey;
+    border-radius: 3px;
+}
+
+p#sso_privacy_policy_content {
+    background-color: white;
+    padding-bottom: 6px;
+    margin-left: -44px;
+    padding: 5px;
+    font-family: museo500, sans-serif;
+    font-size: 14px;
+    overflow-y: scroll;
+    height: 324px;
+    width: 456px;
+    box-shadow: 1px;
+    border: 2px solid grey;
+    border-radius: 3px;
+}
+
+p#sso_terms_and_conditions_content {
+    background-color: white;
+    padding-bottom: 6px;
+    margin-left: -44px;
+    padding: 5px;
+    font-family: museo500, sans-serif;
+    font-size: 14px;
+    overflow-y: scroll;
+    height: 324px;
+    width: 456px;
+    box-shadow: 1px;
+    border: 2px solid grey;
+    border-radius: 3px;
+}
